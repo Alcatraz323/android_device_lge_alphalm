@@ -19,20 +19,20 @@
 # product configuration (apps).
 #
 
-DEVICE_PATH := device/$(PRODUCT_BRAND)/$(TARGET_DEVICE)
+DEVICE_PATH := device/lge/alphalm
 
 # Inherit from lge sm8150-common
 -include device/$(PRODUCT_BRAND)/$(COMMON_SOC)-common/BoardConfigCommon.mk
 
+### KERNEL
+TARGET_KERNEL_CONFIG := vendor/alpha_lao_com-perf_defconfig
+
 # Kernel
-BOARD_KERNEL_CMDLINE += androidboot.hardware=flashlmdd
+BOARD_KERNEL_CMDLINE += androidboot.hardware=alphalm
 
 # Prebuilts
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/$(BOARD_KERNEL_IMAGE_NAME)
-
 # TWRP device specific flags
 TW_MAX_BRIGHTNESS := 511
-TW_Y_OFFSET := 90
-TW_H_OFFSET := -90
+TW_Y_OFFSET := 94
+TW_H_OFFSET := -94
