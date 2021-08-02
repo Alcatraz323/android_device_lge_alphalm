@@ -15,7 +15,7 @@
 #
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # OEM Info
 BOARD_VENDOR := lge
@@ -27,19 +27,19 @@ COMMON_SOC := sm8150
 PRODUCT_PLATFORM := msmnile
 
 # Release name
-PRODUCT_RELEASE_NAME := flashlmdd
+PRODUCT_RELEASE_NAME := alphalm
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := flashlmdd
-PRODUCT_NAME := omni_flashlmdd
+PRODUCT_DEVICE := alphalm
+PRODUCT_NAME := twrp_alphalm
 PRODUCT_BRAND := lge
-PRODUCT_MODEL := LM-V500
+PRODUCT_MODEL := LM-G820
 PRODUCT_MANUFACTURER := LGE
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=flashlmdd_lao_com \
-    BUILD_PRODUCT=flashlmdd \
-    TARGET_DEVICE=flashlmdd
+    PRODUCT_NAME=alphalm_lao_com \
+    BUILD_PRODUCT=alphalm \
+    TARGET_DEVICE=alphalm
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/$(PRODUCT_BRAND)/$(PRODUCT_DEVICE)/device.mk)
